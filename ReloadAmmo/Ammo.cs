@@ -9,7 +9,7 @@ namespace ReloadAmmo
     class Ammo
     {
         public const int AMMO_SIZE = 5;
-        public int BulletsLoaded { get; set; }
+        public int BulletsLoaded { get; private set; }
         private int bullets = 0;
         //private int bulletsLoaded = 0;
         public bool IsEmpty() { return BulletsLoaded == 0; }

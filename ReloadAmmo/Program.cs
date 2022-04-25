@@ -11,7 +11,7 @@ namespace ReloadAmmo
             int bulletAmount = ReadInt(20, "起始子彈數量");
             int ammoSize = ReadInt(5, "彈匣容量");
 
-            Console.Write($"是否在遊戲開始時自動補充彈匣 [{true}]: ");
+            Console.Write($"是否在遊戲開始時自動填充彈匣 [{true}]: ");
             bool.TryParse(Console.ReadLine(), out bool loaded);
 
             static int ReadInt(int lastUsedValue, string prompt)

@@ -9,10 +9,10 @@ namespace ReloadAmmo
     class Ammo
     {
         public const int AMMO_SIZE = 5;
-
+        public int BulletsLoaded { get; set; }
         private int bullets = 0;
-        private int bulletsLoaded = 0;
-        public bool IsEmpty() { return bulletsLoaded == 0; }
+        //private int bulletsLoaded = 0;
+        public bool IsEmpty() { return BulletsLoaded == 0; }
         public int BulletsAmount
         {
             get { return bullets; }
@@ -24,11 +24,11 @@ namespace ReloadAmmo
                 //ReloadAmmo();
             }
         }
-        public int BulletsLoadedAmount
+        /*public int BulletsLoaded
         {
             get { return bulletsLoaded; }
             set { bulletsLoaded = value; }
-        }
+        }*/
          
         
         
@@ -36,8 +36,8 @@ namespace ReloadAmmo
         {
             if (bullets >= AMMO_SIZE)
             {
-                bulletsLoaded = AMMO_SIZE;
-                bullets -= bulletsLoaded;
+                BulletsLoaded = AMMO_SIZE;
+                bullets -= BulletsLoaded;
             }
 
             else return;       
@@ -45,8 +45,8 @@ namespace ReloadAmmo
         //當槍隻有bulletsLoaded時，回傳true並遞減bulletsLoaded欄位 
         public bool Shoot()
         {
-            if (bulletsLoaded == 0) return false;
-            bulletsLoaded--;
+            if (BulletsLoaded == 0) return false;
+            BulletsLoaded--;
             return true;
         }
     }

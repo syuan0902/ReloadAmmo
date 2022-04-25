@@ -9,7 +9,7 @@ namespace ReloadAmmo
             Ammo gunAmmo = new Ammo();
             while (true)
             {
-                Console.WriteLine($"\n擁有 {gunAmmo.BulletsAmount}發子彈, 彈匣內有 {gunAmmo.BulletsLoadedAmount} / 5發子彈");
+                Console.WriteLine($"\n擁有 {gunAmmo.BulletsAmount}發子彈, 彈匣內有 {gunAmmo.BulletsLoaded} / 5發子彈");
                 if (gunAmmo.IsEmpty()) Console.WriteLine("警告: 彈匣已經空了!!");
                 Console.WriteLine("\n按空白鍵射擊, 按o取得5發子彈, 按p消耗5發子彈補滿彈匣, 按u離開遊戲");
                 char key = Console.ReadKey(true).KeyChar;
